@@ -1,0 +1,14 @@
+.center {
+	text-align: center;
+}
+
+.title {
+	font-size: 4rem;
+	color: blue;
+}
+
+header {
+	width: 75%;
+	height: 20%;
+	background-color: gray;
+}
