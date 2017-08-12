@@ -2,7 +2,13 @@
 <html>
 <head>
 
-<script>	</script>
+<script>	
+	function names()
+		var amt = document.getElementById("num").value
+		var names = document.createElement("input");
+		names.type = 'text'
+		document.form.appendchild(amt.to_i);
+</script>
 
 </head>
 
@@ -11,11 +17,12 @@
 <h1> How many pairs would you like to match? </h1>
 
 
-<form method = "post" action = "/p_pairs">
-	<input type = "text" name = "p" required>
-	<input type = "submit" value="Submit">
+<form method = "post" action = "p_pairs">
+	<input id='num' type = "text" name = "num" required>
+	<input type='submit' value='Submit'>
 </form>
 
+	<button onclick='names()'> Enter names: </button>
 
 </body>
 </html>	

@@ -3,7 +3,7 @@
 require "sinatra"
 require_relative "rcp.rb"
 enable :sessions
- |
+ 
 get '/' do
 
 erb :pairs
@@ -17,3 +17,10 @@ post '/p_pairs' do
 
 
 end
+
+#get '/names' do
+#	p = params[:p]
+#	erb :names, locals {p: p}
+#end
+
+#post '/p_names' do 
