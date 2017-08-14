@@ -2,7 +2,8 @@
 
 require "sinatra"
 require_relative "rcp.rb"
-enable :sessions
+require_relative "smash.rb"
+
 
 get '/' do
 
@@ -12,15 +13,16 @@ end
 
 post '/p_pairs' do
 
-	names = [:names]
-	p = rcp(names)
-	smash = smash(p)
-	redirect 'names?smash' + smash
+	qwerty = params[:qwerty]
+	"Hello World #{qwerty}"
+	x = rcp(qwerty)
+	smash = smash(x)
+	redirect '/results?smash=' + smash
 
 
 end
 
  get '/results' do
-	 smash = [:smash]
- 	 erb :names, locals: {smash: smash}
+	 smash = params[:smash]
+ 	 erb :results, locals: {smash: smash}
  end
