@@ -9,8 +9,6 @@
   		e.pop
   		e[0].flatten!
   	end
- 	p "#{e}"
- 	p e.length
+
+ 	e
  end
-
-

@@ -6,11 +6,15 @@
 
 	function names() {
 		var amt = document.getElementById("num").value;
+		for (i = 0; i < amt; i++){
 		var names = document.createElement("input");
 		names.type = "text";
 		names.required = true;
-		names.name = "names"
-		document.div.appendChild(names);
+		names.name = "names" + i
+		names.placeholder = "Names here"
+		box.appendChild(names);
+		box.appendChild(document.createElement("br"));
+		}
 	}
 </script>
 
@@ -22,12 +26,13 @@
 
 <div id = "box">
 <form method = "post" action = "p_pairs">
-	<input id="num" type = "text" name = "num" required>
+	<input id="num" type = "number" min = 4 name = "num" required>
 	<input type = "submit" value = "Submit">
 </form>
+	<button onclick = "names()"> Enter names: </button>
 </div>
 
-	<button onclick = "names()"> Enter names: </button>
+
 
 </body>
 </html>

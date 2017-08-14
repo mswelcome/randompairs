@@ -12,18 +12,15 @@ end
 
 post '/p_pairs' do
 
-	p = params[:p]
-	redirect 'names?p=' + p
+	names = [:names]
+	p = rcp(names)
+	smash = smash(p)
+	redirect 'names?smash' + smash
 
 
 end
 
-# get '/names' do
-# 	p = params[:p]
-# 	erb :names, locals {p: p}
-# end
-#
-# post '/p_names' do
-#
-#
-# end
+ get '/results' do
+	 smash = [:smash]
+ 	 erb :names, locals: {smash: smash}
+ end
