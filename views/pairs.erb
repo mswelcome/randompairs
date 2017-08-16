@@ -2,26 +2,7 @@
 <html>
 <head>
 
-<script>
 
-	function names() {
-		// var arr = [];
-		var amt = document.getElementById("num").value;
-		for (i = 0; i < amt; i++){
-		var qwerty = document.createElement("input");
-		qwerty.type = "text";
-		qwerty.required = true;
-		qwerty.name = "qwerty[]"
-		qwerty.placeholder = "Names here"
-		box.appendChild(qwerty);
-		box.appendChild(document.createElement("br"));
-		// n = document.getElementById("pleasekillme").value;
-		// 	arr.push(n);
-
-		}
-		console.log("I am where")
-	}
-</script>
 
 </head>
 
@@ -29,18 +10,33 @@
 
 <h1> Enter your names for random teams: </h1>
 
+ <button onclick = "names()"> Enter names: </button>
 
-<form method = "post" action = "p_pairs">
-	<input id="num" type = "number" min = 4 name = "num" required>
-	<input type = "submit" value = "Submit">
+<form id = "yo" method = "post" action = "p_pairs">
+	<input type = "text" placeholder = "Names" name = "qwerty[]">
 	<div id = 'box' name = "qwerty[]"> </div>
+	<input type = "submit" value = "Submit">
+
 	<!-- <input type = "hidden" id = 'pleasekillme' name = 'qwerty'> -->
 </form>
-	<button onclick = "names()"> Enter names: </button>
 
 
 
 
 
+
+<script>
+
+	function names() {
+
+		var qwerty = document.createElement("input")
+		qwerty.type = "text";
+		qwerty.name = "qwerty[]"
+		qwerty.placeholder = "Names here"
+		box.appendChild(qwerty);
+		box.appendChild(document.createElement("br"));
+	}
+
+</script>
 </body>
 </html>

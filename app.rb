@@ -3,7 +3,7 @@
 require "sinatra"
 require_relative "rcp.rb"
 require_relative "smash.rb"
-
+enable :sessions
 
 get '/' do
 
@@ -14,15 +14,25 @@ end
 post '/p_pairs' do
 
 	qwerty = params[:qwerty]
-	"Hello World #{qwerty}"
-	x = rcp(qwerty)
-	smash = smash(x)
-	redirect '/results?smash=' + smash
+	session[:x] = rcp(qwerty)
+	redirect '/check?'
 
 
 end
 
+ get '/check' do
+
+ 	 erb :check, locals: {x: session[:x]}
+
+ end
+
+ post '/p_check' do
+ 		gat = params[:gat]
+		smash = smash(gat)
+		redirect '/results?smash=' + smash
+ end
+
  get '/results' do
 	 smash = params[:smash]
- 	 erb :results, locals: {smash: smash}
+	 erb :results, locals: {smash: smash}
  end
