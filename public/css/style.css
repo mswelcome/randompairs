@@ -33,13 +33,13 @@ header {
 
 }
 
-body {
+.image {
 
-	text-align: center;
-	background-image: url(/images/tensa_zangetsu.png);
+
+	background-image: url(/images/aizen_sama_by_vinhfx.jpg);
 	background-size: cover;
-	background-position: center center;
 	background-repeat: no-repeat;
+
 }
 
 #killme {
@@ -62,7 +62,6 @@ body {
 }
 
 footer {
-
 	position: absolute;
 	width: 60.5vw;
 	height: 5vh;
@@ -74,4 +73,16 @@ footer {
 	border-style: solid;
 	border-width: 0.35rem;
 
+}
+
+#test {
+	position: absolute;
+	top: 66%;
+	bottom: 33%;
+	left: 37%;
+	margin: 0%;
+}
+
+#test2 {
+	font-size: 1.5rem;
 }
