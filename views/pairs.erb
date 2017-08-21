@@ -11,6 +11,7 @@
 <h1> Enter your names for random teams: </h1>
 
  <button onclick = "names()"> Enter names: </button>
+ <!-- <button onclick = "rf()"> Remove Fields </button> -->
 
 <form id = "yo" method = "post" action = "p_pairs">
 	<input type = "text" placeholder = "Names" name = "qwerty[]">
@@ -26,16 +27,6 @@
 
 
 <script>
-
-	function names() {
-
-		var qwerty = document.createElement("input")
-		qwerty.type = "text";
-		qwerty.name = "qwerty[]"
-		qwerty.placeholder = "Names here"
-		box.appendChild(qwerty);
-		box.appendChild(document.createElement("br"));
-	}
 
 </script>
 </body>

@@ -27,12 +27,10 @@ end
  end
 
  post '/p_check' do
- 		gat = params[:gat]
-		smash = smash(gat)
-		redirect '/results?smash=' + smash
+ 		session[:gat] = params[:gat]
+		redirect '/results?'
  end
 
  get '/results' do
-	 smash = params[:smash]
-	 erb :results, locals: {smash: smash}
+	  erb :results, locals: {gat: session[:gat]}
  end

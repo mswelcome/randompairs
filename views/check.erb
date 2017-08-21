@@ -1,18 +1,21 @@
-<!DOCUTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <script>
 
-  function check(x) {
+  function vash(x) {
 
-      for (i = 0, i < x.length, i++){
-        var chk = document.createElement('input');
-        chk.type = "checkbox";
-        chk.name = "gat[]";
-        chk.value = "x"
-        ugh.appendChild(chk);
+        for (i = 0; i < x.length; i++){
 
-      }
+          var chk = document.createElement('input');
+          chk.type = "checkbox";
+          chk.name = "gat[]";
+          chk.value = x[i];
+          var label = document.createTextNode(x[i]);
+          ugh.appendChild(label);
+          ugh.appendChild(chk);
+          ugh.appendChild(document.createElement("br"));
+         }
 
   }
 
@@ -20,21 +23,21 @@
 
   </script>
 
+
+
 <head>
 
-<body onload = 'check(x)'>
+<body>
 
-  <button onclick = 'check(x)'> </button>
+
 
   <form method = 'post' action = '/p_check'>
-    <input type = 'hidden' name = x value = '<%=x%>'>
+    <input id = 'yo' type = 'hidden' name = "x" value = '<%=x%>'>
+    <!-- <input type = "hidden" name = "blah" value = "gat[]"> -->
     <div id = 'ugh'> </div>
+    <button type = "button" onclick = 'vash(<%=x%>)'> CheckBoxs </button>
     <input type = 'submit' value = 'Submit'>
   </form>
-
-
-
-
 
 
 
